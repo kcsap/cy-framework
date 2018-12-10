@@ -1,0 +1,156 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali",
+      "type": "com.cy.framework.pay.model.AliPayParam"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx",
+      "type": "com.cy.framework.pay.model.WxPayParam"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.alipay-public-key",
+      "description": "支付宝的公钥",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.app-id",
+      "description": "商户的appid",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.app-private-key",
+      "description": "商户的私钥",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.app-public-key",
+      "description": "商户的公钥",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.auth-url",
+      "description": "支付宝授权认证的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "defaultValue": "UTF-8",
+      "name": "service.pay.ali.charset",
+      "description": "字符类型 默认utf",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "defaultValue": "JSON",
+      "name": "service.pay.ali.format",
+      "description": "格式化数据的类型",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.notify-url",
+      "description": "异步通知的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.redirect-url",
+      "description": "授权回调的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.return-url",
+      "description": "pc端\/h5 支付完成返回的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.scope",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.sign-type",
+      "description": "签名的类型",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.AliPayParam",
+      "name": "service.pay.ali.url",
+      "description": "请求的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.app-id",
+      "description": "app 的appid",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.app-secret",
+      "description": "app的 appSecret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.cert-path",
+      "description": "证书的路径",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.g-app-id",
+      "description": "appid 公众号",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.g-app-secret",
+      "description": "公众号 的appSecret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.key",
+      "description": "秘钥",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.mach-id",
+      "description": "商户ID",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.notify-url",
+      "description": "异步通知的 url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.x-app-secret",
+      "description": "小程序的 appSecret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.pay.model.WxPayParam",
+      "name": "service.pay.wx.x-appid",
+      "description": "小程序的 appid",
+      "type": "java.lang.String"
+    }
+  ]
+}

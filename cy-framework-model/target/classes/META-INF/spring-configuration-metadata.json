@@ -1,0 +1,160 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "name": "service.ftp",
+      "type": "com.cy.framework.model.ftp.FtpParam"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "name": "service.qiniu",
+      "type": "com.cy.framework.model.qiniu.QinNiuParam"
+    },
+    {
+      "sourceType": "com.cy.framework.model.security.SecurityOauth2Config",
+      "name": "service.security",
+      "type": "com.cy.framework.model.security.SecurityOauth2Config"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger",
+      "type": "com.cy.framework.model.swagger.SwaggerParam"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": "\/home\/vsftpd\/test",
+      "name": "service.ftp.home",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": "47.99.122.225",
+      "name": "service.ftp.host",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": "test",
+      "name": "service.ftp.password",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": 21,
+      "name": "service.ftp.port",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": "http:\/\/47.99.122.225\/",
+      "name": "service.ftp.url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.ftp.FtpParam",
+      "defaultValue": "test",
+      "name": "service.ftp.user-name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "name": "service.qiniu.access-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "name": "service.qiniu.bucket",
+      "description": "空间名称",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "defaultValue": 0,
+      "name": "service.qiniu.expires",
+      "description": "token 存在的时间 单位\/秒",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "name": "service.qiniu.secret-key",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.qiniu.QinNiuParam",
+      "name": "service.qiniu.url",
+      "description": "请求的url",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.security.SecurityOauth2Config",
+      "name": "service.security.filters",
+      "description": "过滤的url\n [{\n product:[insert,update]\n }]",
+      "type": "java.util.Map<java.lang.String,java.util.List<java.lang.String>>"
+    },
+    {
+      "sourceType": "com.cy.framework.model.security.SecurityOauth2Config",
+      "defaultValue": false,
+      "name": "service.security.oauth",
+      "description": "是否需要授权",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.cy.framework.model.security.SecurityOauth2Config",
+      "name": "service.security.resource-id",
+      "description": "资源的ID",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.auth-server",
+      "description": "认证服务器",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.base-package",
+      "description": "扫描的包",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.contact-name",
+      "description": "创建人的名称",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.contact-url",
+      "description": "创建人的链接",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.description",
+      "description": "描述",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.email",
+      "description": "创建人的邮箱",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "name": "service.swagger.title",
+      "description": "页面的标题",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.cy.framework.model.swagger.SwaggerParam",
+      "defaultValue": "1.0",
+      "name": "service.swagger.version",
+      "description": "版本号",
+      "type": "java.lang.String"
+    }
+  ]
+}

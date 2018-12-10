@@ -16,6 +16,10 @@ public class BaseFactoryParam implements Serializable {
     private JSONArray data;// 数据
     private String clicent_ip;
     private Object userInfo;
+    /**
+     * 后台用户的信息
+     */
+    private Map<String, Object> managerUser;
     private Boolean admin;
     /**
      * 是否http请求否则tpc
@@ -41,11 +45,47 @@ public class BaseFactoryParam implements Serializable {
     /**
      * 过滤的参数
      */
-    private String[] params;
+    private String params;
     /**
      * 出现异常 返回的参数
      */
     private Map<String, Object> exceptionParam;
+    /**
+     * 需要什么字段
+     */
+    private String fields;
+    /**
+     * 是否过滤？不过滤则表示/要需要字段
+     */
+    private Boolean filter = false;
+
+    public Boolean getFilter() {
+        return filter;
+    }
+
+    public void setFilter(Boolean filter) {
+        this.filter = filter;
+    }
+
+    public String getFields() {
+        return fields;
+    }
+
+    public void setFields(String fields) {
+        this.fields = fields;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Map<String, Object> getManagerUser() {
+        return managerUser;
+    }
+
+    public void setManagerUser(Map<String, Object> managerUser) {
+        this.managerUser = managerUser;
+    }
 
     public Boolean getAdmin() {
         return admin;
@@ -103,11 +143,11 @@ public class BaseFactoryParam implements Serializable {
         this.queue_name = queue_name;
     }
 
-    public String[] getParams() {
+    public String getParams() {
         return params;
     }
 
-    public void setParams(String[] params) {
+    public void setParams(String params) {
         this.params = params;
     }
 

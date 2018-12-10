@@ -1,5 +1,6 @@
 package com.cy.framework.service.dao;
 
+import com.cy.framework.model.redis.RedisCacheParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -7,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-public interface RedisService<K, V> {
+public interface RedisService {
     Logger logger = LoggerFactory.getLogger(RedisService.class);
 
     /**
@@ -106,7 +107,7 @@ public interface RedisService<K, V> {
      * @param pattern
      * @return
      */
-    Set<K> Setkeys(K pattern);
+    Set<String> Setkeys(String pattern);
 
     /**
      * 检查key是否已经存在
@@ -171,4 +172,12 @@ public interface RedisService<K, V> {
     long delete(byte[]... keys);
 
     String getString(String key);
+
+    void cachePut(RedisCacheParam cacheParam);
+
+    Object cacheGet(String key);
+
+    void remove(String key);
+
+    void clear();
 }

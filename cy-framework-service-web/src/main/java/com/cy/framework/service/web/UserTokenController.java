@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-public class UserTokenController extends BaseActiveMQFactoryController {
+public class UserTokenController extends BaseFrameworkController {
     @Resource
     private UserTokenService userTokenService;
 
@@ -24,7 +24,7 @@ public class UserTokenController extends BaseActiveMQFactoryController {
         Map<String, Object> map = new HashMap<>();
         try {
             if (StringUtil.isEmpty(token)) {
-                throw new DataException("请传入token");
+                throw new DataException(188, "请传入token");
             }
             boolean vali = userTokenService.validate(token);
             map.put("result", true);

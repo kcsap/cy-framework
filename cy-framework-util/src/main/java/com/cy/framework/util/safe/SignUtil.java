@@ -1,7 +1,5 @@
 package com.cy.framework.util.safe;
 
-import com.alibaba.fastjson.JSONObject;
-
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

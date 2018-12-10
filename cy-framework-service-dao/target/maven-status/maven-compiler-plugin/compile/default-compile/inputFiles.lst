@@ -1,0 +1,11 @@
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/RedisService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/BasePublicService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/wx/WxAccessTokenService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/BaseFrameworkService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/push/WxTemplateMessageService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/ftp/FtpService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/UserTokenService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/log/mongo/MongoDBService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/lock/DistributedLockService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/log/LogRecordService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-service-dao/src/main/java/com/cy/framework/service/dao/qiniu/QiNiuService.java

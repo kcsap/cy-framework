@@ -6,6 +6,7 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.io.Resource;
@@ -23,8 +24,7 @@ import java.util.concurrent.ThreadPoolExecutor;
 
 @EnableAutoConfiguration
 @SpringBootApplication
-//@EnableEurekaClient
-//@EnableJms
+@EnableDiscoveryClient
 public class BaseApplication extends com.cy.framework.service.web.DruidDataSource {
     @Value("${service.mapper.location}")
     private String locationPattern;
@@ -50,6 +50,7 @@ public class BaseApplication extends com.cy.framework.service.web.DruidDataSourc
             list.addAll(Arrays.asList(resolver.getResources(path)));
         }
         sqlSessionFactoryBean.setMapperLocations(list.toArray(new Resource[]{}));
+//        sqlSessionFactoryBean.setPlugins(new Interceptor[]{new MybatiesInterceptor()});
         return sqlSessionFactoryBean.getObject();
     }
 
@@ -73,4 +74,5 @@ public class BaseApplication extends com.cy.framework.service.web.DruidDataSourc
     public PlatformTransactionManager transactionManager(com.alibaba.druid.pool.DruidDataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
     }
+
 }

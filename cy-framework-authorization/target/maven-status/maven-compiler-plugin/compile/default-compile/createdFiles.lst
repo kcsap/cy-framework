@@ -1,0 +1,17 @@
+META-INF/spring-configuration-metadata.json
+com/cy/framework/authorization/repository/AuthorityRepository.class
+com/cy/framework/authorization/domain/Credentials.class
+com/cy/framework/authorization/configuration/filter/MyAccessDecisionManager.class
+com/cy/framework/authorization/configuration/filter/MyInvocationSecurityMetadataSourceService.class
+com/cy/framework/authorization/domain/Authority.class
+com/cy/framework/authorization/configuration/filter/MyFilterSecurityInterceptor.class
+com/cy/framework/authorization/configuration/SplitCollectionEditor.class
+com/cy/framework/authorization/api/ClientsController.class
+com/cy/framework/authorization/repository/CredentialRepository.class
+com/cy/framework/authorization/configuration/AuthorizationServerConfiguration.class
+com/cy/framework/authorization/configuration/WebSecurityConfiguration.class
+com/cy/framework/authorization/configuration/AuthorityPropertyEditor.class
+com/cy/framework/authorization/api/LoginController.class
+com/cy/framework/authorization/configuration/JdbcUserDetails.class
+com/cy/framework/authorization/utils/Utils.class
+com/cy/framework/authorization/AuthorizationServerApplication.class

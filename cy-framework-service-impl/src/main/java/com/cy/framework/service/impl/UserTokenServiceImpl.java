@@ -19,6 +19,8 @@ import java.util.Date;
 @Service
 public class UserTokenServiceImpl implements UserTokenService {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
+    private final String access_token = "token:";
+    private final String user_id = "user_id:";
     @Resource
     private RedisService redisService;
 
@@ -30,13 +32,13 @@ public class UserTokenServiceImpl implements UserTokenService {
 
     @Override
     public String generateUserId(String key) {
-        String string=redisService.getStr(FinalConfigParam.USER_ID_KEY);
-        if(StringUtil.isEmpty(string)){
-            string="0";
+        String string = redisService.getStr(FinalConfigParam.USER_ID_KEY);
+        if (StringUtil.isEmpty(string)) {
+            string = "0";
         }
-        string=(Integer.parseInt(string)+1)+"";
-        redisService.set(FinalConfigParam.USER_ID_KEY,string);
-        return StringUtil.isEmpty(key) ? TimeUtil.formatYYYMMDD(new Date().getTime())+string : key+string;
+        string = (Integer.parseInt(string) + 1) + "";
+        redisService.set(FinalConfigParam.USER_ID_KEY, string);
+        return StringUtil.isEmpty(key) ? TimeUtil.formatYYYMMDD(new Date().getTime()) + string : key + string;
     }
 
     @Override
@@ -49,7 +51,7 @@ public class UserTokenServiceImpl implements UserTokenService {
         // TODO Auto-generated method stub
         boolean result = false;
         try {
-            byte[] validate = redisService.getObjBytes(token);
+            byte[] validate = redisService.getObjBytes(access_token + token);
             result = !(validate == null || validate.length <= 0);
         } catch (Exception e) {
             // TODO: handle exception
@@ -67,10 +69,10 @@ public class UserTokenServiceImpl implements UserTokenService {
      * @DataTime 2017年6月15日 下午12:42:40
      */
     @Override
-    public Object getUserInfo(String token) throws Exception {
+    public Object getUserInfo(String token) {
         Object obj = null;
         try {
-            byte[] b = redisService.getObjBytes(token);
+            byte[] b = redisService.getObjBytes(access_token + token);
             obj = SerializeUtil.unserialize(b);
             if (obj == null) {
                 throw new Exception("用户未登录");
@@ -78,7 +80,6 @@ public class UserTokenServiceImpl implements UserTokenService {
         } catch (Exception e) {
             // TODO: handle exception
             logger.warn("validate token Exception", e);
-            throw new Exception("用户未登录");
         }
         return obj;
     }
@@ -91,12 +92,12 @@ public class UserTokenServiceImpl implements UserTokenService {
      * @throws Exception
      */
     @Override
-    public Object getUserInfo(HttpServletRequest request) throws Exception {
+    public Object getUserInfo(HttpServletRequest request) {
         // TODO Auto-generated method stub
-        if (request.getAttribute("token") == null || request.getAttribute("token").toString().isEmpty()) {
+        if (request.getHeader("token") == null || request.getHeader("token").isEmpty()) {
             return null;
         }
-        return getUserInfo(request.getAttribute("token").toString());
+        return getUserInfo(request.getHeader("token"));
     }
 
     @Override
@@ -120,10 +121,21 @@ public class UserTokenServiceImpl implements UserTokenService {
             putKey = key2;
 
         }
-        redisService.del(key1);// 删除用户1和用户2的token
-        redisService.del(key2);
-        redisService.set(putKey.getBytes(), SerializeUtil.serialize(userInfoEntity), FinalConfigParam.EXPIRE);
-        redisService.set(builder, putKey, FinalConfigParam.EXPIRE);
+        redisService.del((access_token + key1));// 删除用户1和用户2的token
+        redisService.del((access_token + key2));
+        redisService.set((access_token + putKey).getBytes(), SerializeUtil.serialize(userInfoEntity), FinalConfigParam.EXPIRE);
+        redisService.set((user_id + builder).getBytes(), putKey.getBytes(), FinalConfigParam.EXPIRE);
         return putKey;
+    }
+
+    @Override
+    public String putTokenUserInfo(String key, boolean one, Serializable userInfoEntity) {
+        String key1 = MD5Util.GetMD5Code(key + FinalConfigParam.LOGIN_KEYYES);
+        byte[] token = redisService.getObjBytes(access_token + key1);
+        if (token == null || token.length <= 0) {
+            redisService.set((access_token + key1).getBytes(), SerializeUtil.serialize(userInfoEntity), FinalConfigParam.EXPIRE);
+            redisService.set((user_id + key).getBytes(), key1.getBytes(), FinalConfigParam.EXPIRE);
+        }
+        return key1;
     }
 }

@@ -1,0 +1,12 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.cy.framework.authorization.configuration.AuthorizationServerConfiguration",
+      "name": "spring.datasource",
+      "sourceMethod": "oauthDataSource()",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": []
+}

@@ -154,9 +154,9 @@ public class TimeUtil {
      * @return Date
      * @throws Exception
      */
-    public static Date addOrMinusYear(long ti, int i) throws Exception {
+    public static Date addOrMinusYear(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.YEAR, i);
@@ -172,9 +172,9 @@ public class TimeUtil {
      * @return Date
      * @throws Exception
      */
-    public static Date addOrMinusMonth(long ti, int i) throws Exception {
+    public static Date addOrMinusMonth(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.MONTH, i);
@@ -191,7 +191,7 @@ public class TimeUtil {
      */
     public static Date addOrMinusWeek(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.WEEK_OF_YEAR, i);
@@ -208,7 +208,7 @@ public class TimeUtil {
      */
     public static Date addOrMinusDays(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.DAY_OF_MONTH, i);
@@ -225,7 +225,7 @@ public class TimeUtil {
      */
     public static Date addOrMinusHours(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.HOUR, i);
@@ -242,7 +242,7 @@ public class TimeUtil {
      */
     public static Date addOrMinusMinutes(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.MINUTE, i);
@@ -259,7 +259,7 @@ public class TimeUtil {
      */
     public static Date addOrMinusSecond(long ti, int i) {
         Date rtn = null;
-        GregorianCalendar cal = new GregorianCalendar();
+        GregorianCalendar cal = new GregorianCalendar(FinalConfigParam.TIME_ZONE);
         Date date = new Date(ti);
         cal.setTime(date);
         cal.add(GregorianCalendar.SECOND, i);
@@ -351,7 +351,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getNextMonthStartDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, 1);
         rightNow.set(Calendar.HOUR_OF_DAY, 0);
@@ -369,7 +369,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getBeforeMonthStartDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, 1);
         rightNow.set(Calendar.HOUR_OF_DAY, 0);
@@ -387,7 +387,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getCurrentMonthEndDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, rightNow.getActualMaximum(Calendar.DAY_OF_MONTH));
         rightNow.set(Calendar.HOUR_OF_DAY, 23);
@@ -405,7 +405,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getCurrentMonthFirstDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, 1);
         rightNow.set(Calendar.HOUR_OF_DAY, 0);
@@ -423,7 +423,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getCurrentDayEndDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.HOUR_OF_DAY, 23);
         rightNow.set(Calendar.MILLISECOND, 59);
@@ -440,7 +440,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getCurrentDayStartDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.HOUR_OF_DAY, 0);
         rightNow.set(Calendar.MILLISECOND, 0);
@@ -457,7 +457,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getBeforeDayEndDate(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, rightNow.get(Calendar.DAY_OF_MONTH) - 1);
         rightNow.set(Calendar.HOUR_OF_DAY, 23);
@@ -475,7 +475,7 @@ public class TimeUtil {
      * @return Timestamp
      */
     public static Timestamp getNextDayStartDay(Date date) {
-        Calendar rightNow = Calendar.getInstance();
+        Calendar rightNow = Calendar.getInstance(FinalConfigParam.TIME_ZONE);
         rightNow.setTime(date);
         rightNow.set(Calendar.DAY_OF_MONTH, rightNow.get(Calendar.DAY_OF_MONTH) + 1);
         rightNow.set(Calendar.HOUR_OF_DAY, 0);
@@ -584,6 +584,7 @@ public class TimeUtil {
      */
     public static Date getLastMonth(Date date) {
         DateTime time = new DateTime(date.getTime());
+
         return time.minusMonths(1).toDate();
     }
 

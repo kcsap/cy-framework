@@ -1,6 +1,7 @@
 package com.cy.framework.service.dao;
+
 import com.cy.framework.model.BaseFactoryParam;
-import com.cy.framework.mybaties.dao.BasePublicMapper;
+import com.cy.framework.mybaties.dao.BaseFrameworkMapper;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
@@ -12,7 +13,7 @@ public interface BasePublicService {
 
     void init();
 
-    void setMapper(BasePublicMapper mapper, Class<?> cl);
+    void setMapper(BaseFrameworkMapper mapper, Class<?> cl);
 
     /**
      * 公用的添加

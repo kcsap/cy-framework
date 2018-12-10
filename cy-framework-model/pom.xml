@@ -5,17 +5,17 @@
     <parent>
         <artifactId>cy-framework</artifactId>
         <groupId>com.cy.framework</groupId>
-        <version>1.0</version>
+        <version>5.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <packaging>jar</packaging>
     <groupId>com.cy.framework.model</groupId>
     <artifactId>cy-framework-model</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.cy.framework.util</groupId>
             <artifactId>cy-framework-util</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

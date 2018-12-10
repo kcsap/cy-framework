@@ -45,11 +45,8 @@ public class DistributedLockServiceImpl extends RuntimeException implements Dist
                 Thread.currentThread().interrupt();
             }
         }
-        DataException dataException = new DataException("请求超时,请稍候再试...");
-        dataException.setLockName(lockName);
-        dataException.setLockKey(keyValue);
         releaseLock(lockName, keyValue);
-        throw dataException;
+        throw new DataException(3, "请求超时,请稍候再试...");
     }
 
     /**

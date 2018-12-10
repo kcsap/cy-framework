@@ -1,4 +1,5 @@
 package com.cy.framework.service.dao;
+
 import org.apache.log4j.Logger;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,10 +20,12 @@ public interface UserTokenService {
 
     /**
      * 生成用户的Id
+     *
      * @param key
      * @return
      */
     String generateUserId(String key);
+
     String generateUserId();
 
     /**
@@ -45,6 +48,16 @@ public interface UserTokenService {
     String putTokenUserInfo(String key, Serializable userInfoEntity);
 
     /**
+     * 是否单点登录
+     *
+     * @param key
+     * @param one
+     * @param userInfoEntity
+     * @return
+     */
+    String putTokenUserInfo(String key, boolean one, Serializable userInfoEntity);
+
+    /**
      * 描述： 获取对象
      *
      * @param token
@@ -52,7 +65,7 @@ public interface UserTokenService {
      * @author yangchengfu
      * @DataTime 2017年6月15日 下午12:44:45
      */
-    Object getUserInfo(String token) throws Exception;
+    Object getUserInfo(String token);
 
     /**
      * 获取用户信息
@@ -61,5 +74,5 @@ public interface UserTokenService {
      * @return
      * @throws Exception
      */
-    Object getUserInfo(HttpServletRequest request) throws Exception;
+    Object getUserInfo(HttpServletRequest request);
 }

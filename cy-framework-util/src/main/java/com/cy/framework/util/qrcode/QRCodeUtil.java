@@ -14,11 +14,13 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.common.HybridBinarizer;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import org.apache.log4j.Logger;
+import sun.misc.BASE64Encoder;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -41,7 +43,7 @@ public class QRCodeUtil {
 	private static final int HEIGHT = 60;
 	private static Logger log = Logger.getLogger(QRCodeUtil.class);
 
-	private static BufferedImage createImage(String content, String imgPath, boolean needCompress) {
+	public static BufferedImage createImage(String content, String imgPath, boolean needCompress) {
 		Hashtable<EncodeHintType, Object> hints = new Hashtable<EncodeHintType, Object>();
 		hints.put(EncodeHintType.ERROR_CORRECTION, ErrorCorrectionLevel.M);
 		hints.put(EncodeHintType.CHARACTER_SET, CHARSET);
@@ -65,6 +67,34 @@ public class QRCodeUtil {
 			QRCodeUtil.insertImage(image, imgPath, needCompress);
 		}
 		return image;
+	}
+
+	/**
+	 * 创建二维码，返回base64格式
+	 *
+	 * @param content      内容路径
+	 * @param imgPath      路径
+	 * @param needCompress
+	 * @return
+	 * @throws IOException
+	 */
+	public static String createImageBase64(String content, String imgPath, boolean needCompress) throws IOException {
+		ByteArrayOutputStream baos = new ByteArrayOutputStream();//io流
+		ImageIO.write(QRCodeUtil.createImage(content, imgPath, needCompress), "png", baos);//写入流中
+		byte[] bytes = baos.toByteArray();//转换成字节
+		BASE64Encoder encoder = new BASE64Encoder();
+		return encoder.encodeBuffer(bytes).trim().replaceAll("\n", "").replaceAll("\r", "");//删除 \r\n
+	}
+
+	/**
+	 * @param content      内容
+	 * @param imgPath      路径
+	 * @param needCompress
+	 * @return
+	 * @throws IOException
+	 */
+	public static String createImageBase642(String content, String imgPath, boolean needCompress) throws IOException {
+		return "data:image/png;base64," + createImageBase64(content, imgPath, needCompress);
 	}
 
 	/**

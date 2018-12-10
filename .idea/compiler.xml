@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-author-service" />
+        <module name="cloud-config-service" />
+        <module name="cloud-feign-service" />
+        <module name="cloud-hystrix-turbine-dashboard" />
+        <module name="cloud-zipkin-service" />
+        <module name="cloud-zuul-service" />
+        <module name="cy-framework-apidoc" />
+        <module name="cy-framework-authorization" />
+        <module name="cy-framework-dao" />
+        <module name="cy-framework-manager" />
+        <module name="cy-framework-model" />
+        <module name="cy-framework-mybaties-dao" />
+        <module name="cy-framework-mybaties-mapper" />
+        <module name="cy-framework-pay" />
+        <module name="cy-framework-service-dao" />
+        <module name="cy-framework-service-impl" />
+        <module name="cy-framework-service-web" />
+        <module name="cy-framework-util" />
+        <module name="Test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-author-service" target="1.8" />
+      <module name="cloud-config-service" target="1.8" />
+      <module name="cloud-eureka-service" target="1.8" />
+      <module name="cloud-feign-service" target="1.8" />
+      <module name="cloud-hystrix-turbine-dashboard" target="1.8" />
+      <module name="cloud-zipkin-service" target="1.8" />
+      <module name="cloud-zuul-service" target="1.8" />
+      <module name="cy-cloud-service-parent" target="1.8" />
+      <module name="cy-framework" target="1.8" />
+      <module name="cy-framework-apidoc" target="1.8" />
+      <module name="cy-framework-authorization" target="1.8" />
+      <module name="cy-framework-dao" target="1.8" />
+      <module name="cy-framework-manager" target="1.8" />
+      <module name="cy-framework-model" target="1.8" />
+      <module name="cy-framework-mybaties-dao" target="1.8" />
+      <module name="cy-framework-mybaties-mapper" target="1.8" />
+      <module name="cy-framework-pay" target="1.8" />
+      <module name="cy-framework-service-dao" target="1.8" />
+      <module name="cy-framework-service-impl" target="1.8" />
+      <module name="cy-framework-service-web" target="1.8" />
+      <module name="cy-framework-util" target="1.8" />
+      <module name="Test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

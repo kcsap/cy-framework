@@ -1,0 +1,16 @@
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/domain/Credentials.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/repository/CredentialRepository.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/filter/MyFilterSecurityInterceptor.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/AuthorizationServerConfiguration.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/api/LoginController.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/domain/Authority.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/JdbcUserDetails.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/utils/Utils.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/repository/AuthorityRepository.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/filter/MyInvocationSecurityMetadataSourceService.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/filter/MyAccessDecisionManager.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/WebSecurityConfiguration.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/SplitCollectionEditor.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/AuthorizationServerApplication.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/api/ClientsController.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-authorization/src/main/java/com/cy/framework/authorization/configuration/AuthorityPropertyEditor.java

@@ -5,17 +5,17 @@
     <parent>
         <artifactId>cy-framework</artifactId>
         <groupId>com.cy.framework</groupId>
-        <version>1.0</version>
+        <version>5.0.5</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
+    <packaging>jar</packaging>
     <groupId>com.cy.framework.service.dao</groupId>
     <artifactId>cy-framework-service-dao</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.cy.framework.mybaties.dao</groupId>
-            <artifactId>cy-framework-dao</artifactId>
-            <version>1.0</version>
+            <groupId>com.cy.framework.mybaties.mapper</groupId>
+            <artifactId>cy-framework-mybaties-mapper</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 

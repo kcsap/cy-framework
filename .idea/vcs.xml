@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/../cy-cloud-service-parent" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-config-service" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-feign-service" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zuul-service" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../cy-framework-manager" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-model" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-mybaties-dao" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-mybaties-mapper" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-service-dao" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-service-impl" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-service-web" vcs="svn" />
+    <mapping directory="$PROJECT_DIR$/cy-framework-util" vcs="svn" />
+  </component>
+</project>

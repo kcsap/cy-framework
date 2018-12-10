@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-author-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-config-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-eureka-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-feign-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-hystrix-turbine-dashboard" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zipkin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zuul-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../cy-framework-manager" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-apidoc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-authorization" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-mybaties-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-mybaties-mapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-service-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-service-impl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-service-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cy-framework-util" charset="UTF-8" />
+  </component>
+</project>

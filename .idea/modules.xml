@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-author-service/cloud-author-service.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-author-service/cloud-author-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-config-service/cloud-config-service.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-config-service/cloud-config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-feign-service/cloud-feign-service.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-feign-service/cloud-feign-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-hystrix-turbine-dashboard/cloud-hystrix-turbine-dashboard.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-hystrix-turbine-dashboard/cloud-hystrix-turbine-dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zipkin-service/cloud-zipkin-service.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zipkin-service/cloud-zipkin-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zuul-service/cloud-zuul-service.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cloud-zuul-service/cloud-zuul-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-cloud-service-parent/cy-cloud-service-parent.iml" filepath="$PROJECT_DIR$/../cy-cloud-service-parent/cy-cloud-service-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework.iml" filepath="$PROJECT_DIR$/cy-framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-apidoc/cy-framework-apidoc.iml" filepath="$PROJECT_DIR$/cy-framework-apidoc/cy-framework-apidoc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-authorization/cy-framework-authorization.iml" filepath="$PROJECT_DIR$/cy-framework-authorization/cy-framework-authorization.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cy-framework-manager/cy-framework-manager.iml" filepath="$PROJECT_DIR$/../cy-framework-manager/cy-framework-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-model/cy-framework-model.iml" filepath="$PROJECT_DIR$/cy-framework-model/cy-framework-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-mybaties-dao/cy-framework-mybaties-dao.iml" filepath="$PROJECT_DIR$/cy-framework-mybaties-dao/cy-framework-mybaties-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-mybaties-mapper/cy-framework-mybaties-mapper.iml" filepath="$PROJECT_DIR$/cy-framework-mybaties-mapper/cy-framework-mybaties-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-pay/cy-framework-pay.iml" filepath="$PROJECT_DIR$/cy-framework-pay/cy-framework-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-service-dao/cy-framework-service-dao.iml" filepath="$PROJECT_DIR$/cy-framework-service-dao/cy-framework-service-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-service-impl/cy-framework-service-impl.iml" filepath="$PROJECT_DIR$/cy-framework-service-impl/cy-framework-service-impl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-service-web/cy-framework-service-web.iml" filepath="$PROJECT_DIR$/cy-framework-service-web/cy-framework-service-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cy-framework-util/cy-framework-util.iml" filepath="$PROJECT_DIR$/cy-framework-util/cy-framework-util.iml" />
+    </modules>
+  </component>
+</project>

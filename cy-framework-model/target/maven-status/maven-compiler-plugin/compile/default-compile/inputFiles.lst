@@ -1,0 +1,11 @@
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/PageInfo.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/UploadParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/redis/RedisCacheParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/security/SecurityOauth2Config.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/qiniu/QiNiuUploadParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/ActiveMQQueue.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/ftp/FtpParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/swagger/SwaggerParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/qiniu/QinNiuParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/push/WxSrMessageParam.java
+/Users/ycf/Documents/javaProject/cy/cy-framework/cy-framework/cy-framework-model/src/main/java/com/cy/framework/model/BaseFactoryParam.java

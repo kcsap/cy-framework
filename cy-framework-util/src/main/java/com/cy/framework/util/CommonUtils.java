@@ -45,16 +45,40 @@ import java.util.regex.PatternSyntaxException;
  */
 public class CommonUtils {
 
-    private static Logger logger = Logger.getLogger("com.huihe.biz.comm.SystemUtil");
+    private static Logger logger = Logger.getLogger(CommonUtils.class);
 
     public static String CreateNoncestr() {
+        return CreateNoncestr(10);
+    }
+
+    public static String CreateNoncestr(int x) {
         String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         String res = "";
-        for (int i = 0; i < 16; i++) {
+        for (int i = 0; i < x; i++) {
             Random rd = new Random();
             res += chars.charAt(rd.nextInt(chars.length() - 1));
         }
         return res;
+    }
+
+    /**
+     * 判断一个字符串 是否包含 字母和数字
+     *
+     * @param str
+     * @return
+     */
+    public static boolean isDL(String str) {
+        boolean isDigit = false;//定义一个boolean值，用来表示是否包含数字
+        boolean isLetter = false;//定义一个boolean值，用来表示是否包含字母
+        for (int i = 0; i < str.length(); i++) { //循环遍历字符串
+            if (Character.isDigit(str.charAt(i))) { //用char包装类中的判断数字的方法判断每一个字符
+                isDigit = true;
+            }
+            if (Character.isLetter(str.charAt(i))) { //用char包装类中的判断字母的方法判断每一个字符
+                isLetter = true;
+            }
+        }
+        return (isDigit && isLetter);
     }
 
     /**
@@ -119,7 +143,7 @@ public class CommonUtils {
 
     public static StringBuilder getRandomChar(int count, boolean abc, int abcCount) {
         StringBuilder string = getRandomChar(count);
-        String chars = "abcdefghijklmnopqrstuvwxyz";
+        String chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         if (abc) {
             for (int x = 0; x < abcCount; x++) {
                 string.append(chars.charAt((int) (Math.random() * 26)));
@@ -307,8 +331,8 @@ public class CommonUtils {
      * @author yangchengfu
      * @datatime 2017-1-20 上午10:32:32
      */
-    public static <T> Map<String, Object> beanToMap(Object t, String... keys) {
-        Map<String, Object> map = null;
+    public static <T> HashMap<String, Object> beanToMap(Object t, String... keys) {
+        HashMap<String, Object> map = null;
         List<String> filter = (keys != null && keys.length > 0) ? Arrays.asList(keys) : null;
         try {
             if (t == null) {
@@ -446,6 +470,7 @@ public class CommonUtils {
 
         SimpleDateFormat format = new SimpleDateFormat(formatStr);
         // format.applyPattern(formatStr);
+        format.setTimeZone(FinalConfigParam.TIME_ZONE);
         String sDate = format.format(date);
         return sDate;
     }
@@ -465,6 +490,7 @@ public class CommonUtils {
         Date today = new Date();
         SimpleDateFormat format = new SimpleDateFormat(FinalConfigParam.TIME_FORMAT_SYSTLE);
         try {
+            format.setTimeZone(FinalConfigParam.TIME_ZONE);
             date = format.parse(time);
             Calendar ca = Calendar.getInstance();
             Calendar now = Calendar.getInstance();
@@ -524,6 +550,7 @@ public class CommonUtils {
             return null;
         }
         SimpleDateFormat format = new SimpleDateFormat(FinalConfigParam.TIME_FORMAT_SYSTLE);
+        format.setTimeZone(FinalConfigParam.TIME_ZONE);
         String timeStr = format.format(time);
         return timeStr;
     }
@@ -586,6 +613,7 @@ public class CommonUtils {
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         Date newDate = null;
         try {
+            sdf.setTimeZone(FinalConfigParam.TIME_ZONE);
             newDate = sdf.parse(date);
         } catch (ParseException e) {
             e.printStackTrace();
@@ -872,21 +900,6 @@ public class CommonUtils {
     }
 
     /**
-     * 描述： 验证手机号码
-     *
-     * @param mobiles
-     * @return
-     * @author yangchengfu
-     * @DataTime 2017年6月14日 上午10:32:12
-     */
-    public static boolean isMobileNO(String mobiles) {
-        Pattern p = Pattern.compile("^((13[0-9])|(15[^4,\\D])|(18[0,5-9]))\\d{8}$");
-        Matcher m = p.matcher(mobiles);
-        System.out.println(m.matches() + "---");
-        return m.matches();
-    }
-
-    /**
      * 大陆号码或香港号码均可
      */
     public static boolean isPhoneLegal(String str) throws PatternSyntaxException {
@@ -907,6 +920,28 @@ public class CommonUtils {
         Pattern p = Pattern.compile(regExp);
         Matcher m = p.matcher(str);
         return m.matches();
+    }
+
+    /**
+     * 验证是否手机号码
+     *
+     * @param phone
+     * @return
+     */
+    public static boolean isPhone(String phone) {
+        String regex = "^((13[0-9])|(14[5,7,9])|(15([0-3]|[5-9]))|(166)|(17[0,1,3,5,6,7,8])|(18[0-9])|(19[8|9]))\\d{8}$";
+        if (phone.length() != 11) {
+            logger.warn("手机号应为11位数");
+            return false;
+        } else {
+            Pattern p = Pattern.compile(regex);
+            Matcher m = p.matcher(phone);
+            boolean isMatch = m.matches();
+            if (!isMatch) {
+                logger.warn("请填入正确的手机号");
+            }
+            return isMatch;
+        }
     }
 
     /**

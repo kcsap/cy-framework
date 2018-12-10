@@ -38,7 +38,7 @@ public class WechatTokenParam implements Serializable {
 	private String appid;
 	private String appsecret;
 	private String expire_time;
-	private int expires_in;
+	private Long expires_in;
 	private String access_token;
 
 	public String getAppid() {
@@ -65,11 +65,11 @@ public class WechatTokenParam implements Serializable {
 		this.expire_time = expire_time;
 	}
 
-	public int getExpires_in() {
+	public Long getExpires_in() {
 		return expires_in;
 	}
 
-	public void setExpires_in(int expires_in) {
+	public void setExpires_in(Long expires_in) {
 		this.expires_in = expires_in;
 	}
 
